@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+</head>
+<body>
+  <h1>Add User</h1>
+  <form action="/create" method="post">
+    <p>
+      <label>Name:</label>
+      <input type="text" name="name">
+    </p>
+    <p>
+      <label>Age:</label>
+      <input type="number" name="age">
+    </p>
+    <input type="submit" value="Add">
+  </form>
+
+
+  <% for(index in users){ %>
+  <hr>
+    <p><%= users[index].name %></p>
+    <p><%= users[index].age %></p>
+  <% } %>
+</body>
+</html>
